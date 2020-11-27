@@ -35,6 +35,21 @@ html {
     max-width: calc(100% - 2rem);
     margin: 0 auto 1em auto;
     line-height: 1.3em;
+    img {
+      float: left;
+      margin: 0 1em 1em 0;
+      &.left {
+        float: left;
+        margin: 0 1em 1em 0;
+      }
+      &.right {
+        float: right;
+        margin: 0 0 1em 1em;
+      }
+      @media (max-width: 600px) {
+        max-width: 30vw;
+      }
+    }
   }
   #head {
     font-size: 1.5em;
