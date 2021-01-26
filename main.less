@@ -56,43 +56,38 @@ html {
     display:block;
     position: relative;
     #img {
+      float:left;
+      max-width: 30%;
       img {
-        max-width: 6rem;
+        max-width: 100%;
       }
     }
     #head {
       padding-left: 0;
       margin-bottom: 4rem;
       font-size: 1rem;
-      padding-top: 4em;
+      padding-top: 0.5em;
+      display:inline-block;
+      width: calc(100% - 30% - 2rem);
+      margin-left: 2rem;
     }
     #text {
-      width: 100%;
-      display: block;
-      text-align: center;
+      margin-top: 2rem;
       margin-bottom: 4rem;
+      text-align: center;
       ol {
-        margin: 0 auto 4rem;
-        list-style: none;
-        padding: 4rem 0;
+        margin: 0 auto 6rem;
         li {
           &:before {
-            display:none;
-          }
-          &:after {
-            content: " ";
-            display:block;
-            margin: 2em auto 1em;
-            border-top: 1px solid rgba(#000,0.1);
-            width: 4rem;
-          }
-          &:last-child {
-            &:after {
-              display:none;
-            }
+            margin: 0 auto 2em;
           }
         }
       }
+    }
+  }
+  @media (max-width: 20rem) {
+    #head {
+      font-size: 0.8rem;
     }
   }
   > * {
@@ -130,7 +125,6 @@ html {
     max-width: 6em;
     line-height: 1.2em;
     margin-bottom: .5em;
-    transform: translateY(-0.18em);
     flex-grow:1;
   }
   h4 {
