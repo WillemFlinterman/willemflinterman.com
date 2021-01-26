@@ -76,6 +76,9 @@ html {
         list-style: none;
         padding: 4rem 0;
         li {
+          &:before {
+            display:none;
+          }
           &:after {
             content: " ";
             display:block;
@@ -149,12 +152,20 @@ html {
   ol {
     max-width: 14em;
     list-style: disc;
+    list-style: none;
     list-style-position: inside;
     // list-style-position: outside;
     margin: 0 0 4em;
     li { 
       margin-bottom: 2em;
       line-height: 1.2em;
+      &:before {
+        content: " ";
+        display:block;
+        margin: 0em 0 2em;
+        border-top: 1px solid rgba(#000,0.1);
+        width: 4rem;
+      }
     }
   }
 }
